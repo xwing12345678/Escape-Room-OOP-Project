@@ -29,11 +29,10 @@ class Room():
     
     @classmethod
     def from_dict(cls,data:dict)->Room:
+        # gets rid of the R a in Room Id so I can use the regular init
         room_id:str = data["room_id"]
         without_R = room_id.strip("R")
+        #gets rid of the zeros
+        without0 = without_R.lstrip("0")
         
         return Room(int(without_R),data['name'],data['difficulty'],data['duration'],data['min_players'],data['max_players'],data['price_per_player'],data['is_active'])
-
-t_l = Room(1,"The Lab","Easy",60,2,8,80)
-rd = t_l.to_dict()
-print(rd)
