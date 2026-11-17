@@ -2,6 +2,7 @@ from datetime import datetime
 from .Room import Room
 from .Booking import Booking
 from .PricingManager import PricingManager
+
 class BookingManager():
     def __init__(self) -> None:
         self._rooms:list[Room] = []
