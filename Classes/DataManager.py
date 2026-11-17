@@ -7,7 +7,7 @@ import json
 
 
 class DataManager():
-    def __init__(self,rooms_file ,bookings_file) -> None:
+    def __init__(self,rooms_file,bookings_file) -> None:
         self._rooms_file = rooms_file
         self._bookings_file = bookings_file 
 
