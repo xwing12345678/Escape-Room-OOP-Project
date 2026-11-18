@@ -1,4 +1,4 @@
-from datetime import datetime,date,time,timedelta
+from datetime import datetime,date,time
 from Helpers.time_functs import get_current_date
 
 def in_time_slice(checked_time:time, start:time,end:time)->bool:
@@ -6,7 +6,6 @@ def in_time_slice(checked_time:time, start:time,end:time)->bool:
     if checked_time>start and checked_time<end:
         return True
     return result
-
 
 def is_unoccupied_slot(checked_time_start:time,checked_time_end:time, start:time,end:time)->bool:
     if not in_time_slice(checked_time_start,start,end) or in_time_slice(checked_time_end,start,end):
@@ -60,19 +59,3 @@ def past_day(day:int)->bool:
     if not day >= get_current_date().day:
         return False
     return True
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-

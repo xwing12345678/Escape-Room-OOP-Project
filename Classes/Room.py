@@ -104,7 +104,7 @@ class Room():
             "is_active": self.__is_active,}
 
     @classmethod
-    def from_dict(cls, data: dict) -> "Room":
+    def from_dict(cls, data: dict) -> Room:
         return cls(**data)
 
 
