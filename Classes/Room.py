@@ -64,6 +64,8 @@ class Room():
     def max_players(self,max_players:int):
         if not is_positive_int(max_players):
             raise ValueError("Max_players must be a positive whole number!")
+        if not max_players >= self.min_players:
+            raise ValueError("Max_players must be greater or equal to min_players!")
         self.__max_players = max_players
     
     @property
