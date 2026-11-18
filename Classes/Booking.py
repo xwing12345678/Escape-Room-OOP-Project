@@ -3,7 +3,8 @@ from typing import Literal
 
 class Booking():
     def __init__(self,next_id:int,customer_name:str,room_id:str,booking_date:date,start_time:time,players:int,total_price:int|float,status:Literal['Active','Cancelled']='Active',cancellation_fee:float = 0.0) -> None: 
-        self.booking_id = f'B{next_id:03d}'
+        
+        self._booking_id =  
         self.customer_name:str = customer_name
         self.room_id:str = room_id 
         self.booking_date:date = booking_date
@@ -12,6 +13,8 @@ class Booking():
         self.total_price:int|float = total_price 
         self.status:Literal['Active','Cancelled'] = status 
         self.cancellation_fee:float = 0.0
+
+    @property 
 
     
     def cancel(self,fee:float):
